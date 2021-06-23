@@ -299,6 +299,7 @@ C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -340,6 +341,7 @@ C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\scopedcss\bundle\Parks.style
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.TagHelpers.input.cache
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.TagHelpers.output.cache
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.RazorCoreGenerate.cache
+C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Parks\ParkData.cshtml.g.cs
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -353,5 +355,3 @@ C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.dll
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\ref\Parks.dll
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.pdb
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.genruntimeconfig.cache
-C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Parks\ParkData.cshtml.g.cs
-C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Newtonsoft.Json.dll

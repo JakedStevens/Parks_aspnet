@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Parks.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Parks.Controllers
@@ -18,11 +15,11 @@ namespace Parks.Controllers
 		{
 			_logger = logger;
 			_helperFunctions = helperFunctions;
-		}	
+		}
 
 		public async Task<IActionResult> ParkData(string search)
 		{
-			var parks = await _helperFunctions.GetParks(search);
+			ParkViewModel parks = await _helperFunctions.GetParks(search);
 			return View("ParkData", parks);
 		}
 

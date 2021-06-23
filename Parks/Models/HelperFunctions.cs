@@ -11,7 +11,7 @@ namespace Parks.Models
 	{
 		private static readonly HttpClient _httpClient = new HttpClient();
 
-		public async Task<string> GetParks(string searchTerm)
+		public async Task<ParkViewModel> GetParks(string searchTerm)
 		{
 			HttpResponseMessage response = await _httpClient.GetAsync("https://seriouslyfundata.azurewebsites.net/api/parks");
 			response.EnsureSuccessStatusCode();
@@ -32,11 +32,22 @@ namespace Parks.Models
 				newParkRecord.Description = park["Description"].ToString();
 				newParkRecord.HabitatType = park["HabitatType"].ToString();
 
-				
 				parkList.Add(newParkRecord);
 			}
-			var thing1 = parkList;
-			return searchTerm;
+			if (!string.IsNullOrEmpty(searchTerm) && searchTerm.Length > 0)
+			{
+				List<Park> parksFiltered = parkList.Where(park => park.ParkName.ToLower().Contains(searchTerm.ToLower())).ToList();
+				ParkViewModel parks = new ParkViewModel();
+				parks.AllParks = parksFiltered;
+				return parks;
+			}
+			else
+			{
+				ParkViewModel parks = new ParkViewModel();
+				parks.AllParks = parkList;
+				return parks;
+			}
+
 		}
 	}
 }

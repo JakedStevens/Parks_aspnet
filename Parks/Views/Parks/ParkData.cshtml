@@ -1,7 +1,29 @@
 ﻿@{
 	ViewData["Title"] = "Park Data";
-	@model string;
+	@model Parks.Models.ParkViewModel;
 }
 
-<h1>yaw</h1>
-<h2>@Model</h2>
+<div class="container">
+	<div class="row">
+		<h1>Parks</h1>
+	</div>
+	@foreach (var park in @Model.AllParks)
+	{
+		<hr />
+		<div class="row">
+			<h3>@park.ParkName</h3>
+		</div>
+
+		<div class="row">
+			<h5>Borough: @park.Borough</h5>
+		</div>
+
+		<div class="row">
+			<h5>Acres: @park.Acres</h5>
+		</div>
+		<div class="row">
+			<h5>Description: </h5>
+			<div>@Html.Raw(@park.Description)</div>
+		</div>
+	}
+</div>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Parks.Models
+﻿namespace Parks.Models
 {
 	public class Park
 	{  
@@ -15,7 +10,5 @@ namespace Parks.Models
         public string Directions { get; set; }
         public string Description { get; set; }
         public string HabitatType { get; set; }
-
-        //public Park (string parkid, string parkname, string sanctuar)
-    }
+  }
 }
