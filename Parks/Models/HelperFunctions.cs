@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Runtime.Caching;
 
 namespace Parks.Models
 {
@@ -11,13 +12,30 @@ namespace Parks.Models
 	{
 		private static readonly HttpClient _httpClient = new HttpClient();
 
+		public async Task<string> GetParksCache(object cachedParksObj)
+		{
+			if (cachedParksObj == null)
+			{
+				HttpResponseMessage response = await _httpClient.GetAsync("https://seriouslyfundata.azurewebsites.net/api/parks");
+				response.EnsureSuccessStatusCode();
+				string responseContent = await response.Content.ReadAsStringAsync();
+				MemoryCache.Default["parksList"] = responseContent;
+
+				return responseContent;
+			}
+			else
+			{
+				string cachedParks = cachedParksObj.ToString();
+				return cachedParks;
+			}
+		}
+
 		public async Task<ParkViewModel> GetParks(string searchTerm)
 		{
-			HttpResponseMessage response = await _httpClient.GetAsync("https://seriouslyfundata.azurewebsites.net/api/parks");
-			response.EnsureSuccessStatusCode();
+			object cachedParks = MemoryCache.Default["parksList"];
+			string responseContent = await GetParksCache(cachedParks);
 
-			string responseContent = await response.Content.ReadAsStringAsync();
-			var parksResponse = JArray.Parse(responseContent);
+			JArray parksResponse = JArray.Parse(responseContent);
 			List<Park> parkList = new List<Park>();
 
 			foreach (var park in parksResponse)
