@@ -22,9 +22,8 @@ namespace Parks.Controllers
 
 		public async Task<IActionResult> ParkData(string search)
 		{
-			var thing = await _helperFunctions.GetParks(search);
-
-			return View("ParkData", thing);
+			var parks = await _helperFunctions.GetParks(search);
+			return View("ParkData", parks);
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
