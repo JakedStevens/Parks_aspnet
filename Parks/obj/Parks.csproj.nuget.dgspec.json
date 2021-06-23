@@ -43,6 +43,14 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [

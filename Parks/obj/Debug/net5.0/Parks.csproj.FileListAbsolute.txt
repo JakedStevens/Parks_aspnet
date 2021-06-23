@@ -354,3 +354,4 @@ C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\ref\Parks.dll
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.pdb
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Parks.genruntimeconfig.cache
 C:\code\accelerator\vs\Parks\Parks\obj\Debug\net5.0\Razor\Views\Parks\ParkData.cshtml.g.cs
+C:\code\accelerator\vs\Parks\Parks\bin\Debug\net5.0\Newtonsoft.Json.dll

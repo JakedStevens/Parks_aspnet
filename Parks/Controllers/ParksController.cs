@@ -18,13 +18,13 @@ namespace Parks.Controllers
 		{
 			_logger = logger;
 			_helperFunctions = helperFunctions;
-		}
+		}	
 
-		public IActionResult ParkData(string search)
+		public async Task<IActionResult> ParkData(string search)
 		{
-			ViewBag.search = search;
-			_helperFunctions.GetParks(search);
-			return View("ParkData");
+			var thing = await _helperFunctions.GetParks(search);
+
+			return View("ParkData", thing);
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
