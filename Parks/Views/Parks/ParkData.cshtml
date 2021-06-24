@@ -7,6 +7,17 @@
 	<div class="row">
 		<h1>Parks</h1>
 	</div>
+
+	@using (Html.BeginForm("ParkData", "Parks"))
+	{
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<input class="btn btn-success" type="submit" id="search-btn" value="Search" />
+			</div>
+			<input type="text" class="form-control" placeholder="Park Name or Keyword" name="search">
+		</div>
+	}
+
 	@foreach (var park in @Model.AllParks)
 	{
 		<hr />
