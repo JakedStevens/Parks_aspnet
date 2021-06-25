@@ -26,6 +26,7 @@ namespace Parks
 		{
 			services.AddControllersWithViews();
 			services.AddSingleton<HelperFunctions>();
+			services.AddSingleton<CacheService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

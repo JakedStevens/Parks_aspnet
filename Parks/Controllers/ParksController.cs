@@ -8,29 +8,27 @@ namespace Parks.Controllers
 {
 	public class ParksController : Controller
 	{
-		private readonly ILogger<ParksController> _logger;
 		private readonly HelperFunctions _helperFunctions;
 
-		public ParksController(ILogger<ParksController> logger, HelperFunctions helperFunctions)
+		public ParksController(HelperFunctions helperFunctions)
 		{
-			_logger = logger;
 			_helperFunctions = helperFunctions;
 		}
 
 		public async Task<IActionResult> ParkData(string search)
 		{
-			ParkViewModel parks = await _helperFunctions.GetParks(search);
-			//return Json();
+			ParkViewModel parks = await _helperFunctions.GetParksData(search);
+			
 			return View("ParkData", parks);
 		}
 
 		public async Task<IActionResult> JSParkData(string search)
 		{
-			ParkViewModel parks = await _helperFunctions.GetParks(search);
+			ParkViewModel parks = await _helperFunctions.GetParksData(search);
 			return Json(parks);
 		}
 
-		public async Task<IActionResult> JSParkDataView(string search)
+		public IActionResult JSParkDataView()
 		{
 			return View("JavascriptParks");
 		}
