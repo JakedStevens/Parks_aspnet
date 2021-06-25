@@ -54,6 +54,14 @@ namespace Parks
 					name: "ParkData",
 					pattern: "parkdata/{search?}",
 					defaults: new { controller = "Parks", action = "ParkData" });
+				endpoints.MapControllerRoute(
+					name: "Parks Json",
+					pattern: "parksJson/",
+					defaults: new { controller = "Parks", action = "JSParkData" });
+				endpoints.MapControllerRoute(
+					name: "JSParks",
+					pattern: "jsparks/{search?}",
+					defaults: new { controller = "Parks", action = "JSParkDataView" });
 			});
 		}
 	}

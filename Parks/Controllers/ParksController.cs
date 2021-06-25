@@ -20,7 +20,19 @@ namespace Parks.Controllers
 		public async Task<IActionResult> ParkData(string search)
 		{
 			ParkViewModel parks = await _helperFunctions.GetParks(search);
+			//return Json();
 			return View("ParkData", parks);
+		}
+
+		public async Task<IActionResult> JSParkData(string search)
+		{
+			ParkViewModel parks = await _helperFunctions.GetParks(search);
+			return Json(parks);
+		}
+
+		public async Task<IActionResult> JSParkDataView(string search)
+		{
+			return View("JavascriptParks");
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
