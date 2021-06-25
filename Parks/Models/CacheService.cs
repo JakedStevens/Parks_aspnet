@@ -10,12 +10,10 @@ namespace Parks.Models
 	public class CacheService
 	{
 		private readonly IMemoryCache _cache;
-		private readonly ILogger<CacheService> _logger;
 
-		public CacheService(ILogger<CacheService> logger, IMemoryCache memoryCache)
+		public CacheService(IMemoryCache memoryCache)
 		{
 			_cache = memoryCache;
-			_logger = logger;
 		}
 
 		public bool CacheExists()
@@ -36,17 +34,5 @@ namespace Parks.Models
 			};
 			_cache.Set("parkList", parksList, cacheEntryOptions);
 		}
-
-		//if (cachedParksObj == null)
-		//{
-
-
-		//	return responseContent;
-		//}
-		//else
-		//{
-		//	string cachedParks = cachedParksObj.ToString();
-		//	return cachedParks;
-		//}
 	}
 }

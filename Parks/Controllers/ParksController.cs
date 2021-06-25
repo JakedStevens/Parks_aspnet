@@ -18,7 +18,6 @@ namespace Parks.Controllers
 		public async Task<IActionResult> ParkData(string search)
 		{
 			ParkViewModel parks = await _helperFunctions.GetParksData(search);
-			
 			return View("ParkData", parks);
 		}
 
